@@ -1,0 +1,19 @@
+{
+"name": "algorithms",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+"scripts": {
+"test": "node ./node_modules/.bin/_mocha --require should --recursive ./test"
+},
+"repository": {
+"type": "git",
+"url": "git+https://github.com/igocooper/algorithms-igocooper.git"
+},
+"author": "",
+"license": "ISC",
+"devDependencies": {
+"mocha": "^3.2.0",
+"should": "^11.2.1"
+}
+}

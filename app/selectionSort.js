@@ -1,28 +1,22 @@
 'use strict';
 
+
 function selectionSort(array) {
 
-    let isSorted = false;
+    for (var i =0; i < array.length; i++) {
+        var lowest = array[i],
+            lowestIndex = i;
 
-    while (!isSorted ) {
-        isSorted = true;
+        for( var j = i; j < array.length; j++){
 
-        for (var i =0; i < array.length; i++) {
-            var item = array[i];
-
-            for( var j = i; j < array.length; j++){
-                if ( item > array[j]) {
-                    isSorted = false;
-
-                    var tmp = array[i];
-                    array[i] = array[j];
-                    array[j] = tmp;
-                    break;
-                }
+            if (array[j] < lowest) {
+                lowest = array[j];
+                lowestIndex = j;
             }
         }
 
-
+        array[lowestIndex] = array[i];
+        array[i] = lowest;
     }
     return array
 };
